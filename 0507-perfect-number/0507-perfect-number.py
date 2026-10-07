@@ -1,9 +1,9 @@
 class Solution:
     def checkPerfectNumber(self, num: int) -> bool:
-        sum=1
-        for i in range(2,int(num**0.5)+1):
-            if num%i==0:
-                sum=sum+i
-                if i!=num//i:
-                 sum=sum+num//i
-        return sum==num and sum!=1
+        s=1
+        for p in range(2,int(num**0.5)+1):
+            if num%p==0:
+                s+=p
+                if p!=num//p:
+                    s+=num//p 
+        return s==num and s!=1
