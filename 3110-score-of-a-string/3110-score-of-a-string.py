@@ -2,5 +2,8 @@ class Solution:
     def scoreOfString(self, s: str) -> int:
         sum=0
         for i in range(len(s)-1):
-            sum=sum+abs(ord(s[i])-ord(s[i+1]))
+            a=ord(s[i])
+            b=ord(s[i+1])
+            temp=abs(a-b)
+            sum=sum+temp
         return sum
